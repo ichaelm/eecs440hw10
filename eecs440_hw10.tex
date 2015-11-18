@@ -209,6 +209,20 @@
 	\label{fig:q3box3}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{bias}
+	\caption{caption}
+	\label{fig:bias}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{variance}
+	\caption{caption}
+	\label{fig:variance}
+\end{figure}
+
 % Main document
 
 \begin{document}
@@ -246,17 +260,19 @@
     
     \begin{enumerate}
     	\item
-    	See figures \ref{fig:q1box1}, \ref{fig:q1box2}, \ref{fig:q1box3}.
+    	See figures \ref{fig:q1box1}, \ref{fig:q1box2}, and \ref{fig:q1box3}.
     	
     	\item
-    	See figures \ref{fig:q2box1}, \ref{fig:q2box2}, \ref{fig:q2box3}.
+    	See figures \ref{fig:q2box1}, \ref{fig:q2box2}, and \ref{fig:q2box3}.
     	
     	\item
-    	See figures \ref{fig:q3box1}, \ref{fig:q3box2}, \ref{fig:q3box3}. These results show that in the long run, the initial prior probability only influences the amount of time it takes for the results to converge on the correct result, not what that result actually is. This finding does not necessarily apply to higher-dimensional hypothesis spaces with more local optima.
+    	See figures \ref{fig:q3box1}, \ref{fig:q3box2}, and \ref{fig:q3box3}. These results show that in the long run, the initial prior probability only influences the amount of time it takes to converge on the correct result, not what that result actually is. This finding does not necessarily apply to higher-dimensional hypothesis spaces with more local optima.
     	
     \end{enumerate}
 
 \end{homeworkProblem}
+
+\pagebreak
 
 \begin{homeworkProblem}
 	
@@ -272,6 +288,8 @@
      \textbf{Solution}
 
 \end{homeworkProblem}
+
+\pagebreak
 
 \begin{homeworkProblem}
 	
@@ -318,7 +336,15 @@
 		\[ Var[h(x,y)] = E[(h(x,y)-E[h(x,y)])^2] = E[(\frac{1}{3} - \frac{1}{3})^2] = 0 \]
 		
 		\item
+		Figure \ref{fig:bias} shows the bias of $h(x,y)$, and figure \ref{fig:variance} shows the variance.
 		
+		The (x,y) coordinates with the largest bias are visually (-1,-1), (-1,1), (1,-1), and (1,1).
+		
+		The (x,y) coordinates with the largest variance are visually the same four.
+		
+		It makes intuitive sense that the bias is largest at the corners because they are the lowest points of f(x,y), and the bias depends negatively on f.
+		
+		It makes intuitive sense that the variance is largest at the corners because the linear regression hypotheses will generally get the slope somewhat wrong, making it more accurate for the center of the distribution of examples than for the outskirts.
 		
 	\end{enumerate}
 	
