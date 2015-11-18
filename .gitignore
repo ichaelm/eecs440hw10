@@ -1,3 +1,7 @@
-*.png
-*.asv
+*.aux
+*.fff
+*.lof
+*.log
+*.pdf
+*.gz
 
