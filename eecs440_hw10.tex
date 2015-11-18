@@ -8,7 +8,7 @@
 \usepackage{tikz}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
-\usepackage[figuresonly, nomarkers]{endfloat}
+\usepackage[figuresonly, nomarkers, nolists]{endfloat}
 
 \usetikzlibrary{automata,positioning}
 
@@ -149,77 +149,77 @@
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q1box1}
-	\caption{caption}
+	\caption{}
 	\label{fig:q1box1}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q1box2}
-	\caption{caption}
+	\caption{}
 	\label{fig:q1box2}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q1box3}
-	\caption{caption}
+	\caption{}
 	\label{fig:q1box3}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q2box1}
-	\caption{caption}
+	\caption{}
 	\label{fig:q2box1}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q2box2}
-	\caption{caption}
+	\caption{}
 	\label{fig:q2box2}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q2box3}
-	\caption{caption}
+	\caption{}
 	\label{fig:q2box3}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q3box1}
-	\caption{caption}
+	\caption{}
 	\label{fig:q3box1}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q3box2}
-	\caption{caption}
+	\caption{}
 	\label{fig:q3box2}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{q3box3}
-	\caption{caption}
+	\caption{}
 	\label{fig:q3box3}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{bias}
-	\caption{caption}
+	\caption{}
 	\label{fig:bias}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{variance}
-	\caption{caption}
+	\caption{}
 	\label{fig:variance}
 \end{figure}
 
@@ -379,6 +379,12 @@
 	example from $U$ appears in $T$ is approximately 0.63.
 	
 	\textbf{Solution}
+	
+	Consider that $T$ is constructed by picking a random sample from $U$ $n$ times, where $n$ is the size of both $U$ and $T$. Each sample in $U$ has a probability $\frac{1}{n}$ of being picked each time. To look at the probability of each given sample never being put in $T$, take the probability of any sample not being picked in a given pick, $1-\frac{1}{n}$, and consider it being repeated n times. This makes the probability of any sample in $U$ not being put into $T$ $(1-\frac{1}{n})^n$. This will also be the proportion of $U$ that is not in $T$. So the proportion of $U$ than is in $T$ is $1-(1-\frac{1}{n})^n$.
+	
+	
+	
+	As n becomes large, $\lim_{n\to\infty} 1-(1-\frac{1}{n})^n = 1-\frac{1}{e} \approx 0.63$ due to the definition of $e$. 
 
 \end{homeworkProblem}
 
